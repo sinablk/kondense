@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize, word_tokenize
 
+from . import __version__
 
 try:
     word_tokenize('Lorem ipsum')
@@ -23,6 +24,7 @@ except LookupError:
     help='Number of sentences to return'
 )
 @click.argument('filepath')
+@click.version_option(__version__)
 def main(filepath, length):
     """ Summarize text based on word frequency.
 
