@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+from kondense import __version__
 
 # Read dependencies
 with open('requirements.txt', 'r') as f:
@@ -12,7 +13,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='kondense',
-    version='0.1.0',
+    version=__version__,
     description='CLI tool for quick analysis of texts with the help of NLTK',
     long_description=long_description,
     long_description_content_type='text/markdown',
